@@ -11,9 +11,7 @@ import argparse
 def passwordGenerator(args):
 
 
-    # print("ARGS: "+str(args.numWords))
     diceNumber = ''
-    # numWords = 2
     randomNumber = 0
     passPhrase = ''
     capitalize = False
@@ -60,10 +58,6 @@ def passwordGenerator(args):
         print("ERROR: Requested number "+str(numNumbers)+" and special length "+str(numSpecials)+" greater than your max length of:" +str(length))
         exit()
 
-    #print("ARG CAPS "+args.capitalize)
-    #print("ARG CAPS "+args.capitalize.lower())
-    #print("ARG CAPS "+ args.capitalize.lower().strip("''"))
-
     if (args.capitalize is None):
         capitilize = False
     elif (args.capitalize.lower().strip("'") == "true" or args.capitalize.lower().strip("'") == "t"):
@@ -92,11 +86,6 @@ def passwordGenerator(args):
             exit()
         else:
             quantity = args.quantity
-
-
-    print("----")
-    # print(random_entry)
-    #print(len(diceList2))
 
     for i in range(quantity):
         countNumbers = 0
